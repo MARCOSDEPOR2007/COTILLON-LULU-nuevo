@@ -90,6 +90,16 @@ body {
   line-height: 1.6;
 }
 
+/* Imágenes a la derecha */
+.imagenes-nosotros {
+  flex: 1 1 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
 .img-nosotros {
   width: 100%;
   max-width: 250px;
@@ -109,15 +119,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* Imágenes a la derecha */
-.imagenes-nosotros {
-  flex: 1 1 35%;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  justify-content: center;
-}
 .instagram {
   width: 40px;
   height: 40px;
@@ -127,7 +128,7 @@ body {
 /* Responsive: en pantallas chicas, las imágenes bajan abajo del texto */
 @media (max-width: 768px) {
   .main-nosotros {
-  flex-direction ;
+    flex-direction: column;
     align-items: center;
   }
 
