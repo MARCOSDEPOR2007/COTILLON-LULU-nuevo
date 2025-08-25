@@ -5,19 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cotillón-LULU</title>
     <link rel="stylesheet" href="../estilos/styles.css" />
-    <link rel="stylesheet"
-    href="="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
-    crossorigin="anonymous" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
     <link
       rel="icon"
       href="./iamgenes/cotillon lulu logo.png"
-      type="iamenes/png"
+      type="image/png"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
+    <!-- HEADER -->
     <header class="header">
       <div class="logo-container">
         <img
@@ -34,45 +35,107 @@
         <a href="index.html">Inicio</a>
         <a href="./paginas/productos.html">Productos</a>
         <a href="./paginas/sobrenosotros.html">Sobre Nosotros</a>
+        <a href="./paginas/micarrito.html">Mi carrito</a>
         <a href="./paginas/iniciarsesion.html">Iniciar Sesión</a>
       </nav>
     </header>
 
+    <!-- MAIN con carrusel -->
     <main class="main">
-      <section class="categoria">
-        <h2 class="titulo-categoria">Repostería</h2>
-        <a href="paginas/productos.html">
-          <img
-            class="imagen-producto"
-            src="./iamgenes/reposteria1.jpg"
-            alt="Repostería"
-          />
-        </a>
-      </section>
+      <div
+        id="carouselProductos"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <!-- Indicadores -->
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselProductos"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselProductos"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselProductos"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
 
-      <section class="categoria">
-        <h2 class="titulo-categoria">Globos</h2>
-        <a href="paginas/productos.html">
-          <img
-            class="imagen-producto"
-            src="./iamgenes/globos.jpeg"
-            alt="Globos"
-          />
-        </a>
-      </section>
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <!-- ITEM 1 -->
+          <div class="carousel-item active">
+            <img
+              src="./iamgenes/reposteria1.jpg"
+              class="d-block mx-auto imagen-producto"
+              alt="Repostería"
+            />
+            <div class="carousel-caption d-none d-md-block bg-caption">
+              <h5>Repostería</h5>
+              <p>Todo para decorar tus tortas y mesas dulces</p>
+            </div>
+          </div>
 
-      <section class="categoria">
-        <h2 class="titulo-categoria">Carioca</h2>
-        <a href="paginas/productos.html">
-          <img
-            class="imagen-producto"
-            src="./iamgenes/carioca.webp"
-            alt="Carioca"
-          />
-        </a>
-      </section>
+          <!-- ITEM 2 -->
+          <div class="carousel-item">
+            <img
+              src="./iamgenes/globos.jpeg"
+              class="d-block mx-auto imagen-producto"
+              alt="Globos"
+            />
+            <div class="carousel-caption d-none d-md-block bg-caption">
+              <h5>Globos</h5>
+              <p>Los mejores diseños para tus fiestas</p>
+            </div>
+          </div>
+
+          <!-- ITEM 3 -->
+          <div class="carousel-item">
+            <img
+              src="./iamgenes/carioca.webp"
+              class="d-block mx-auto imagen-producto"
+              alt="Carioca"
+            />
+            <div class="carousel-caption d-none d-md-block bg-caption">
+              <h5>Carioca</h5>
+              <p>Todo en cotillón divertido</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Controles -->
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselProductos"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselProductos"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
     </main>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <p class="seguinos">Seguinos en nuestras redes</p>
       <a href="https://www.instagram.com/" target="_blank">
@@ -83,6 +146,8 @@
         />
       </a>
     </footer>
+
+    <!-- BOOTSTRAP JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"

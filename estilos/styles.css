@@ -1,8 +1,10 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html,
 body {
   height: 100%;
@@ -15,12 +17,12 @@ body {
   line-height: 1.6;
   background-color: #fff9f9;
   color: #333;
-  height: 100%;
   margin: 0;
   display: flex;
   flex-direction: column;
 }
 
+/* ---------- HEADER ---------- */
 .header {
   display: flex;
   flex-direction: column;
@@ -67,46 +69,56 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
-.hero {
-  width: 100%;
-  overflow: hidden;
+.navegacion a:hover {
+  color: #ff1e63;
 }
 
+/* ---------- MAIN con carrusel ---------- */
 .main {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
   padding: 2rem;
   background-color: #fff0f5;
   flex: 1;
 }
 
-.categoria {
-  text-align: center;
-}
-
-.titulo-categoria {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
+/* Imagen del carrusel más chica */
 .imagen-producto {
-  width: 100%;
-  max-width: 450px;
-  border-radius: 10px;
+  max-height: 300px; /* más chica que antes */
+  width: auto;
+  object-fit: contain;
+  border-radius: 15px;
   transition: transform 0.3s;
+  display: block;
+  margin: 0 auto;
 }
 
 .imagen-producto:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
+/* Caption con fondo rosa */
+.bg-caption {
+  background: rgba(255, 182, 193, 0.8);
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  animation: aparecer 1s ease-in-out;
+}
+
+/* Flechas negras */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+  border-radius: 50%;
+}
+
+/* ---------- FOOTER ---------- */
 .footer {
   text-align: center;
   padding: 1rem;
   background-color: #ffb6c1;
+  margin-top: auto;
 }
 
 .seguinos {
@@ -118,8 +130,21 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 10px;
+  transition: transform 0.3s;
 }
-.categoria {
-  border: 2px dashed #ff69b4; /* color rosa claro */
-  height: 90%;
+
+.instagram:hover {
+  transform: scale(1.1);
+}
+
+/* Animación */
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
