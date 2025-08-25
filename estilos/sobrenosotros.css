@@ -127,7 +127,7 @@ body {
 /* Responsive: en pantallas chicas, las imágenes bajan abajo del texto */
 @media (max-width: 768px) {
   .main-nosotros {
-  flex-direction ;
+    flex-direction: row;
     align-items: center;
   }
 
